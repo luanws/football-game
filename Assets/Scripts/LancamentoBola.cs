@@ -17,7 +17,7 @@ public class LancamentoBola : MonoBehaviour
 
     void Update()
     {
-        if (rotacaoSeta.chuteLiberado || Input.GetKeyUp(KeyCode.Space))
+        if (rotacaoSeta.chuteLiberado)
         {
             chutar();
         }
