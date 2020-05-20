@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RotacaoSeta : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private Transform posicaoInicial;
+    public Transform posicaoInicial;
     [SerializeField] private Image setaImage;
     public float velocidadeRotacao = 2.5f;
     public float rotacao;
@@ -65,6 +65,13 @@ public class RotacaoSeta : MonoBehaviour
             {
                 rotacao += 2.5f;
             }
+
+            // Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // float distancia = Vector2.Distance(mouse, posicaoInicial.position);
+            // float angulo = Vector2.Angle(mouse, posicaoInicial.position);
+            // print(distancia + " " + angulo);
+
+            // rotacao = angulo;
         }
     }
 
@@ -80,11 +87,13 @@ public class RotacaoSeta : MonoBehaviour
         }
     }
 
-    private void OnMouseDown() {
+    private void OnMouseDown()
+    {
         rotacaoLiberada = true;
     }
 
-    private void OnMouseUp() {
+    private void OnMouseUp()
+    {
         rotacaoLiberada = false;
         chuteLiberado = true;
     }

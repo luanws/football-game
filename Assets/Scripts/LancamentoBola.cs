@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LancamentoBola : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
     public float forca = 1000;
     private RotacaoSeta rotacaoSeta;
+    [SerializeField] private Image setaVerde;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -19,6 +21,7 @@ public class LancamentoBola : MonoBehaviour
         {
             chutar();
         }
+        controlarForca();
     }
 
     private Vector2 polar(float raio, float angulo)
@@ -32,5 +35,19 @@ public class LancamentoBola : MonoBehaviour
     {
         rigidbody2D.AddForce(polar(forca, rotacaoSeta.rotacao));
         rotacaoSeta.chuteLiberado = false;
+    }
+
+    private void controlarForca()
+    {
+        if (rotacaoSeta.rotacaoLiberada)
+        {
+            Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            float distancia = Vector2.Distance(mouse, rotacaoSeta.posicaoInicial.position);
+            if (distancia > 0)
+            {
+                setaVerde.fillAmount = distancia / 3;
+                forca = setaVerde.fillAmount * 1000;
+            }
+        }
     }
 }
