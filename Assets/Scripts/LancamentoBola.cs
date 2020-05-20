@@ -42,7 +42,7 @@ public class LancamentoBola : MonoBehaviour
         if (rotacaoSeta.rotacaoLiberada)
         {
             Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float distancia = Vector2.Distance(mouse, rotacaoSeta.posicaoInicial.position);
+            float distancia = Vector2.Distance(mouse, transform.position);
             if (distancia > 0)
             {
                 setaVerde.fillAmount = distancia / 3;
