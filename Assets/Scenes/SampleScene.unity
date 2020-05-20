@@ -134,7 +134,7 @@ MonoBehaviour:
   setaImage: {fileID: 903618107}
   velocidadeRotacao: 1
   rotacao: 0
-  rotacaoLiberada: 1
+  rotacaoLiberada: 0
 --- !u!114 &219524865
 MonoBehaviour:
   m_ObjectHideFlags: 0

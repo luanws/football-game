@@ -58,11 +58,11 @@ public class RotacaoSeta : MonoBehaviour
 
             if (y > 0)
             {
-                rotacao += 2.5f;
+                rotacao -= 2.5f;
             }
             else if (y < 0)
             {
-                rotacao -= 2.5f;
+                rotacao += 2.5f;
             }
         }
     }
@@ -77,6 +77,14 @@ public class RotacaoSeta : MonoBehaviour
         {
             rotacao = 0;
         }
+    }
+
+    private void OnMouseDown() {
+        rotacaoLiberada = true;
+    }
+
+    private void OnMouseUp() {
+        rotacaoLiberada = false;
     }
 }
 
