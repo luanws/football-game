@@ -7,7 +7,8 @@ public class RotacaoSeta : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform posicaoInicial;
-    [SerializeField] private Image setaImage;
+    [SerializeField] private Image setaImagem;
+    [SerializeField] private Image setaImagemVerde;
     public float velocidadeRotacao = 2.5f;
     public float rotacao;
     public bool rotacaoLiberada = false;
@@ -32,12 +33,12 @@ public class RotacaoSeta : MonoBehaviour
 
     private void posicionarSeta()
     {
-        setaImage.rectTransform.position = gameObject.transform.position;
+        setaImagem.rectTransform.position = gameObject.transform.position;
     }
 
     private void rotacionarSeta()
     {
-        setaImage.rectTransform.eulerAngles = new Vector3(0, 0, rotacao);
+        setaImagem.rectTransform.eulerAngles = new Vector3(0, 0, rotacao);
     }
 
     private void inputRotacao()
@@ -67,12 +68,16 @@ public class RotacaoSeta : MonoBehaviour
 
     private void OnMouseDown()
     {
+        setaImagem.enabled = true;
+        setaImagemVerde.enabled = true;
         posicionarSeta();
         rotacaoLiberada = true;
     }
 
     private void OnMouseUp()
     {
+        setaImagem.enabled = false;
+        setaImagemVerde.enabled = false;
         rotacaoLiberada = false;
         chuteLiberado = true;
     }
