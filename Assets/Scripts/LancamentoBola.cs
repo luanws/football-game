@@ -45,7 +45,7 @@ public class LancamentoBola : MonoBehaviour
             float distancia = Vector2.Distance(mouse, transform.position);
             if (distancia > 0)
             {
-                setaVerde.fillAmount = distancia / 3;
+                setaVerde.fillAmount = distancia / 2;
                 forca = setaVerde.fillAmount * 1000;
             }
         }
