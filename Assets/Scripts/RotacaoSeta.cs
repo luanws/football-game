@@ -23,7 +23,6 @@ public class RotacaoSeta : MonoBehaviour
     {
         rotacionarSeta();
         inputRotacao();
-        // limitarRotacao();
     }
 
     private void posicionarBola()
@@ -33,7 +32,7 @@ public class RotacaoSeta : MonoBehaviour
 
     private void posicionarSeta()
     {
-        setaImage.rectTransform.position = posicaoInicial.position;
+        setaImage.rectTransform.position = gameObject.transform.position;
     }
 
     private void rotacionarSeta()
@@ -49,26 +48,26 @@ public class RotacaoSeta : MonoBehaviour
             mouse -= (Vector2)gameObject.transform.position;
             if (mouse.x <= 0 && mouse.y <= 0)
             {
-                float angulo = Vector2.Angle(new Vector2(mouse.x, 0), mouse);
-                rotacao = angulo;
+                rotacao = Vector2.Angle(new Vector2(mouse.x, 0), mouse);
             }
-        }
-    }
-
-    private void limitarRotacao()
-    {
-        if (rotacao > 90)
-        {
-            rotacao = 90;
-        }
-        else if (rotacao < 0)
-        {
-            rotacao = 0;
+            else if (mouse.x > 0 && mouse.y < 0)
+            {
+                rotacao = 180 - Vector2.Angle(new Vector2(mouse.x, 0), mouse);
+            }
+            else if (mouse.x > 0 && mouse.y > 0)
+            {
+                rotacao = 180 + Vector2.Angle(new Vector2(mouse.x, 0), mouse);
+            }
+            else if (mouse.x < 0 && mouse.y > 0)
+            {
+                rotacao = -Vector2.Angle(new Vector2(mouse.x, 0), mouse);
+            }
         }
     }
 
     private void OnMouseDown()
     {
+        posicionarSeta();
         rotacaoLiberada = true;
     }
 
