@@ -11,6 +11,7 @@ public class RotacaoSeta : MonoBehaviour
     public float velocidadeRotacao = 2.5f;
     public float rotacao;
     public bool rotacaoLiberada = false;
+    public bool chuteLiberado = false;
 
     private void Start()
     {
@@ -85,6 +86,7 @@ public class RotacaoSeta : MonoBehaviour
 
     private void OnMouseUp() {
         rotacaoLiberada = false;
+        chuteLiberado = true;
     }
 }
 

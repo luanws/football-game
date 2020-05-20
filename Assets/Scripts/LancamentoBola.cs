@@ -15,9 +15,9 @@ public class LancamentoBola : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (rotacaoSeta.chuteLiberado || Input.GetKeyUp(KeyCode.Space))
         {
-            rigidbody2D.AddForce(polar(forca, rotacaoSeta.rotacao));
+            chutar();
         }
     }
 
@@ -26,5 +26,11 @@ public class LancamentoBola : MonoBehaviour
         float x = raio * Mathf.Cos(angulo * Mathf.Deg2Rad);
         float y = raio * Mathf.Sin(angulo * Mathf.Deg2Rad);
         return new Vector2(x, y);
+    }
+
+    private void chutar()
+    {
+        rigidbody2D.AddForce(polar(forca, rotacaoSeta.rotacao));
+        rotacaoSeta.chuteLiberado = false;
     }
 }
