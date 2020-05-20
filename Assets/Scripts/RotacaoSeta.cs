@@ -23,7 +23,7 @@ public class RotacaoSeta : MonoBehaviour
     {
         rotacionarSeta();
         inputRotacao();
-        limitarRotacao();
+        // limitarRotacao();
     }
 
     private void posicionarBola()
@@ -43,35 +43,15 @@ public class RotacaoSeta : MonoBehaviour
 
     private void inputRotacao()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            rotacao += velocidadeRotacao;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            rotacao -= velocidadeRotacao;
-        }
-
         if (rotacaoLiberada)
         {
-            float x = Input.GetAxis("Mouse X");
-            float y = Input.GetAxis("Mouse Y");
-
-            if (y > 0)
+            Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouse -= (Vector2)gameObject.transform.position;
+            if (mouse.x <= 0 && mouse.y <= 0)
             {
-                rotacao -= 2.5f;
+                float angulo = Vector2.Angle(new Vector2(mouse.x, 0), mouse);
+                rotacao = angulo;
             }
-            else if (y < 0)
-            {
-                rotacao += 2.5f;
-            }
-
-            // Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // float distancia = Vector2.Distance(mouse, posicaoInicial.position);
-            // float angulo = Vector2.Angle(mouse, posicaoInicial.position);
-            // print(distancia + " " + angulo);
-
-            // rotacao = angulo;
         }
     }
 
