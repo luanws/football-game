@@ -8,7 +8,9 @@ public class RotacaoSeta : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Transform posicaoInicial;
     [SerializeField] private Image setaImage;
+    public float velocidadeRotacao = 2.5f;
     public float rotacao;
+    public bool rotacaoLiberada = false;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class RotacaoSeta : MonoBehaviour
     {
         rotacionarSeta();
         inputRotacao();
+        limitarRotacao();
     }
 
     private void posicionarBola()
@@ -41,11 +44,38 @@ public class RotacaoSeta : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rotacao += 2.5f;
+            rotacao += velocidadeRotacao;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rotacao -= 2.5f;
+            rotacao -= velocidadeRotacao;
+        }
+
+        if (rotacaoLiberada)
+        {
+            float x = Input.GetAxis("Mouse X");
+            float y = Input.GetAxis("Mouse Y");
+
+            if (y > 0)
+            {
+                rotacao += 2.5f;
+            }
+            else if (y < 0)
+            {
+                rotacao -= 2.5f;
+            }
+        }
+    }
+
+    private void limitarRotacao()
+    {
+        if (rotacao > 90)
+        {
+            rotacao = 90;
+        }
+        else if (rotacao < 0)
+        {
+            rotacao = 0;
         }
     }
 }
