@@ -53,7 +53,6 @@ public class LancamentoBola : MonoBehaviour
 
     private void OnMouseDown()
     {
-        rigidbody2D.velocity = Vector2.zero;
         rigidbody2D.Sleep();
     }
 }
