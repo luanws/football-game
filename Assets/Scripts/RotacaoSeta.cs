@@ -16,6 +16,8 @@ public class RotacaoSeta : MonoBehaviour
 
     private void Start()
     {
+        setaImagem.enabled = false;
+        setaImagemVerde.enabled = false;
         posicionarBola();
         posicionarSeta();
     }
