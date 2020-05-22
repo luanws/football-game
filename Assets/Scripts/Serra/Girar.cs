@@ -6,15 +6,11 @@ public class Girar : MonoBehaviour
 {
     [SerializeField] private float velocidade = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         transform.Rotate(new Vector3(0, 0, velocidade * Time.deltaTime));
     }
 }
