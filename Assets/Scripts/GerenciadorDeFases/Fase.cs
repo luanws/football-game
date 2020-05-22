@@ -1,15 +1,25 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
 [System.Serializable]
 public class Fase {
     public int numero;
-    private bool _desbloqueado = false;
-    public bool desbloqueado {
-        get { return _desbloqueado; }
+    private const string CHAVE_FASE = "fase_desbloqueada_";
+    public bool desbloqueada {
+        get { 
+            return bool.Parse(PlayerPrefs.GetString(CHAVE_FASE + numero, "false"));
+        }
     }
-    public Fase(int numero, bool desbloqueado) {
+    public Fase(int numero) {
         this.numero = numero;
-        this._desbloqueado = desbloqueado;
+    }
+    public void bloquear() {
+        PlayerPrefs.SetString(CHAVE_FASE + numero, false.ToString());
     }
     public void desbloquear() {
-        _desbloqueado = true;
+        PlayerPrefs.SetString(CHAVE_FASE + numero, true.ToString());
+    }
+    public void iniciar() {
+        SceneManager.LoadScene("Scenes/Fases/" + numero.ToString());
     }
 }

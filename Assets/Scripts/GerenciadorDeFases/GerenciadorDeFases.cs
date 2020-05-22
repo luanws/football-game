@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GerenciadorDeFases : MonoBehaviour {
     public GameObject botaoPrefab;
@@ -10,6 +9,8 @@ public class GerenciadorDeFases : MonoBehaviour {
     public List<Fase> fases;
 
     void Start() {
+        PlayerPrefs.DeleteAll();
+        desbloquearFase(1);
         gerarBotoes();
     }
 
@@ -18,21 +19,18 @@ public class GerenciadorDeFases : MonoBehaviour {
             GameObject botao = Instantiate(botaoPrefab);
             BotaoFase botaoFase = botao.GetComponent<BotaoFase>();
 
-            if (bool.Parse(PlayerPrefs.GetString("fase_desbloqueada_" + fase.numero, "false"))) {
-                fase.desbloquear();
-            }
-            fase.desbloquear();
-
             botaoFase.fase = fase;
             botao.transform.SetParent(botaoTransform, false);
 
             botaoFase.GetComponent<Button>().onClick.AddListener(() => {
-                iniciarFase(fase);
+                desbloquearFase(fase.numero + 1);
+                fase.iniciar();
             });
         }
     }
 
-    private void iniciarFase(Fase fase) {
-        SceneManager.LoadScene("Scenes/Fases/" + fase.numero.ToString());
+    private void desbloquearFase(int numero) {
+        Fase fase = new Fase(numero);
+        fase.desbloquear();
     }
 }
