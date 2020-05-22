@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Fundo_0
     21300002: Fundo_1
+    21300004: Fundo_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -122,7 +123,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a2b6ebf109164e42b3b7c0e99137675
+      spriteID: e49a89adafdc7664fb58a70917cae881
       vertices: []
       indices: 
       edges: []
@@ -132,9 +133,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1372
-        y: 627
-        width: 180
-        height: 131
+        y: 618
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,7 +143,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cd9f3110f6ea8741bb4de77ec08bf19
+      spriteID: 04ca263b9703e174f8013deea7a04878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fundo_2
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 254
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e030ddc20aa7145bbf2e91ab148c64
       vertices: []
       indices: 
       edges: []

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 158826453}
   - component: {fileID: 158826452}
   - component: {fileID: 158826451}
+  - component: {fileID: 158826454}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -194,6 +195,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158826454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158826450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0d81b65df4f584ba5232a8ef23c964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  botaoPrefab: {fileID: 4312495371412528607, guid: dea89e2993d157a44a828f3061c1a2ce,
+    type: 3}
+  botaoTransform: {fileID: 1906834632}
+  fases:
+  - texto: 1
+    desbloqueado: 1
+  - texto: 2
+    desbloqueado: 0
+  - texto: 3
+    desbloqueado: 0
+  - texto: 4
+    desbloqueado: 0
 --- !u!1 &254124048
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +725,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
