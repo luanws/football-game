@@ -8,13 +8,14 @@ public class BotaoFase : MonoBehaviour
     public Text textFase;
     public Fase fase {
         get {
-            Fase fase = new Fase();
-            fase.texto = textFase.text;
-            fase.desbloqueado = GetComponent<Button>().interactable;
+            Fase fase = new Fase(
+                int.Parse(textFase.text), 
+                GetComponent<Button>().interactable
+            );
             return fase;
         }
         set {
-            textFase.text = value.texto;
+            textFase.text = value.numero.ToString();
             GetComponent<Button>().interactable = value.desbloqueado;
             textFase.enabled = value.desbloqueado;
         }
