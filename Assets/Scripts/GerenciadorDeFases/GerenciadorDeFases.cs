@@ -9,7 +9,7 @@ public class GerenciadorDeFases : MonoBehaviour {
     public List<Fase> fases;
 
     void Start() {
-        PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
         desbloquearFase(1);
         gerarBotoes();
     }
