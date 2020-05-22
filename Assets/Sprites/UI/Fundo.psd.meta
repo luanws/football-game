@@ -5,6 +5,7 @@ TextureImporter:
     21300000: Fundo_0
     21300002: Fundo_1
     21300004: Fundo_2
+    21300006: Fundo_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -123,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e49a89adafdc7664fb58a70917cae881
+      spriteID: a313656106c4eb54fb6e871bbc9bb963
       vertices: []
       indices: 
       edges: []
@@ -143,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ca263b9703e174f8013deea7a04878
+      spriteID: 578efff2ac359fa4eae66fff80d8f9e8
       vertices: []
       indices: 
       edges: []
@@ -153,7 +154,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1372
-        y: 254
+        y: 436
         width: 140
         height: 140
       alignment: 0
@@ -163,7 +164,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77e030ddc20aa7145bbf2e91ab148c64
+      spriteID: 0373965c81a007a4ea7b08f34443e0ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fundo_3
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 247
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6baba302c9d7b3942af883523633d683
       vertices: []
       indices: 
       edges: []
