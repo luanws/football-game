@@ -236,90 +236,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 772a279fc06e106469a362d5d904835e, type: 3}
---- !u!1001 &661404487
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.15234375
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545877, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545882, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: m_Name
-      value: Musicas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545883, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892065968046545883, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: audioClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: d800c11563686b247afefc7c6c41af3a, type: 3}
-    - target: {fileID: 6892065968046545883, guid: d2d7a2280bb1df44d876a6592dbda2ce,
-        type: 3}
-      propertyPath: audioClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 6725aa6e8b2b86944ba7a309aa117983, type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d2d7a2280bb1df44d876a6592dbda2ce, type: 3}
 --- !u!1 &791496045
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +542,7 @@ PrefabInstance:
     - target: {fileID: 114195446102136132, guid: 14f2f4dc450d3f44a97f5a853aebcd89,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114195446102136132, guid: 14f2f4dc450d3f44a97f5a853aebcd89,
         type: 3}
@@ -1171,7 +1087,7 @@ PrefabInstance:
     - target: {fileID: 314703058793153077, guid: 6fbeaf01fd3017840aa70a7dc847b356,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.88
+      value: -3.334513
       objectReference: {fileID: 0}
     - target: {fileID: 314703058793153077, guid: 6fbeaf01fd3017840aa70a7dc847b356,
         type: 3}
