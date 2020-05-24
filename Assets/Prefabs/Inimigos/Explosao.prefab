@@ -63,7 +63,7 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_ForceMagnitude: 500
+  m_ForceMagnitude: 200
   m_ForceVariation: 0
   m_DistanceScale: 1
   m_ForceSource: 0
@@ -150,4 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f59b42c7ede7f4cb381b0a52151481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoExplosao: 0.5
+  tempoExplosao: 0.25
