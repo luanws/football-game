@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 5845628005657507361}
   - component: {fileID: 5062558998388512054}
   - component: {fileID: 1074808789495773284}
+  - component: {fileID: 2390235373425502214}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -894,6 +895,18 @@ MonoBehaviour:
   m_Text: '1000
 
 '
+--- !u!114 &2390235373425502214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311493436810608230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1b14bdf53c4b145bd95184bbb3b2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5272449605718460512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1010,6 +1023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994123875090572247, guid: 7ab939b50a015444c8c77ad5ee3c2f3b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab939b50a015444c8c77ad5ee3c2f3b, type: 3}
