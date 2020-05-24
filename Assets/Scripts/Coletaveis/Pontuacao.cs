@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GerenciadorPontuacao : MonoBehaviour
+public class Pontuacao : MonoBehaviour
 {
-    public static GerenciadorPontuacao instancia;
+    public static Pontuacao instance;
     public int moedas {
         get {
             return PlayerPrefs.GetInt("moedas", 100);
@@ -15,8 +15,8 @@ public class GerenciadorPontuacao : MonoBehaviour
     }
 
     void Awake() {
-        if(instancia == null) {
-            instancia = this;
+        if(instance == null) {
+            instance = this;
             DontDestroyOnLoad(this.gameObject);
         } else {
             Destroy(gameObject);
