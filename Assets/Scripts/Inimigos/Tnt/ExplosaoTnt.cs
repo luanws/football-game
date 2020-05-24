@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tnt : MonoBehaviour {
+public class ExplosaoTnt : MonoBehaviour {
     [SerializeField] 
     private GameObject explosaoPrefab;
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Player")) {
             Instantiate(explosaoPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }
