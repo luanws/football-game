@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 314703058793153072}
   m_Layer: 0
   m_Name: Bola
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,10 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564a985f38acad9469561fb3a8b46498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posicaoInicial: {fileID: 314703058793153077}
   setaImagem: {fileID: 314703057865798409}
   setaImagemVerde: {fileID: 314703059522923133}
-  velocidadeRotacao: 2.5
   rotacao: 0
   rotacaoLiberada: 0
   chuteLiberado: 0
