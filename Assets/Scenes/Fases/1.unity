@@ -167,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 3101274260670855660, guid: 772a279fc06e106469a362d5d904835e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3101274260670855660, guid: 772a279fc06e106469a362d5d904835e,
         type: 3}
@@ -317,7 +317,7 @@ Transform:
   m_LocalScale: {x: 2.4842095, y: 2.4842095, z: 2.4842095}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &791496048
 BoxCollider2D:
