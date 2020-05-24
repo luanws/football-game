@@ -42,7 +42,6 @@ public class KickManager : MonoBehaviour {
         imageArrowGreen.enabled = false;
         rotationAllowed = false;
         kickAllowed = true;
-        Sons.instance.Play(audioClipKick);
     }
     
     private void RotateArrow() {
@@ -74,6 +73,7 @@ public class KickManager : MonoBehaviour {
         float y = forceKick * Mathf.Sin(rotation * Mathf.Deg2Rad);
         rigidbody2D.AddForce(new Vector2(x, y));
         kickAllowed = false;
+        Sons.instance.Play(audioClipKick);
     }
 
     private void ForceControl() {
