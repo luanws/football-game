@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Moeda : MonoBehaviour {
-    [SerializeField]
-    private int valor = 1;
+    [SerializeField] private int valor = 1;
+    [SerializeField] private AudioClip audioClipColetaMoeda;
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             Pontuacao.instance.adicionarMoedas(valor);
-            Sons.instance.Play("ColetaMoeda");
+            Sons.instance.Play(audioClipColetaMoeda);
             Destroy(gameObject);
         }
     }

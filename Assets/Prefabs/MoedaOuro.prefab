@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 70490329454620133}
   - component: {fileID: 70490329454620130}
-  - component: {fileID: 70490329454620132}
   - component: {fileID: 70490329454620135}
+  - component: {fileID: 70490329454620132}
   m_Layer: 0
   m_Name: MoedaOuro
   m_TagString: Untagged
@@ -81,19 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &70490329454620132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70490329454620131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c75cecb6fc970741bb8c3c67be33b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valor: 100
 --- !u!58 &70490329454620135
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,3 +97,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!114 &70490329454620132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70490329454620131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c75cecb6fc970741bb8c3c67be33b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valor: 100
+  audioClipColetaMoeda: {fileID: 8300000, guid: 5b36c5660e0e3084181c03fba6d74aea,
+    type: 3}

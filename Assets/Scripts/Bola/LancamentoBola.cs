@@ -8,12 +8,13 @@ public class LancamentoBola : MonoBehaviour {
     public float forca = 1000;
     private RotacaoSeta rotacaoSeta;
     [SerializeField] private Image setaVerde;
-    void Start() {
+    [SerializeField] private AudioClip audioClipChute;
+    private void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
         rotacaoSeta = GetComponent<RotacaoSeta>();
     }
 
-    void Update() {
+    private void Update() {
         if (rotacaoSeta.chuteLiberado) {
             chutar();
         }
@@ -43,7 +44,7 @@ public class LancamentoBola : MonoBehaviour {
     }
 
     private void OnMouseUp() {
-        Sons.instance.Play("Chute");
+        Sons.instance.Play(audioClipChute);
     }
     
     private void OnMouseDown() {
