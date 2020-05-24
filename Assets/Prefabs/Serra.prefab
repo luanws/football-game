@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4533540943002368425}
   - component: {fileID: 4533540943002368427}
   m_Layer: 0
-  m_Name: Serra
+  m_Name: SerraGoleira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
