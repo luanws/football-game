@@ -42,6 +42,10 @@ public class LancamentoBola : MonoBehaviour {
         }
     }
 
+    private void OnMouseUp() {
+        Sons.instance.Play("Chute");
+    }
+    
     private void OnMouseDown() {
         rigidbody2D.Sleep();
     }
