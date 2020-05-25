@@ -19,6 +19,7 @@ public class Death : MonoBehaviour {
 
     private void Update() {
         OverflowPositionDeath();
+        Suicide();
         // IsStoppedDeath();
     }
 
@@ -42,5 +43,9 @@ public class Death : MonoBehaviour {
 
     private void IsStoppedDeath() {
         if (rigidbody2D.velocity == Vector2.zero && !kickManager.kickControlAllowed) OnDeath("velocidade nula");
+    }
+
+    public void Suicide() {
+        if (!kickManager.kickControlAllowed && Input.GetMouseButton(0)) OnDeath("suicídio");
     }
 }
