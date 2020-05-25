@@ -10,7 +10,7 @@ public class KickManager : MonoBehaviour {
     [SerializeField] private float maxForceKick = 1000;
     private Rigidbody2D rigidbody2D;
     private float rotation;
-    private bool rotationAllowed = false;
+    public bool kickControlAllowed = true;
     private bool kickAllowed = false;
     private float forceKick;
 
@@ -34,17 +34,20 @@ public class KickManager : MonoBehaviour {
     }
 
     private void OnMouseDown() {
-        imagemArrow.enabled = true;
-        imageArrowGreen.enabled = true;
-        rotationAllowed = true;
-        rigidbody2D.Sleep();
+        if (kickControlAllowed) {
+            imagemArrow.enabled = true;
+            imageArrowGreen.enabled = true;
+            rigidbody2D.Sleep();
+        }
     }
 
     private void OnMouseUp() {
-        imagemArrow.enabled = false;
-        imageArrowGreen.enabled = false;
-        rotationAllowed = false;
-        kickAllowed = true;
+        if (kickControlAllowed) {
+            imagemArrow.enabled = false;
+            imageArrowGreen.enabled = false;
+            kickControlAllowed = false;
+            kickAllowed = true;
+        }
     }
     
     private void RotateArrow() {
@@ -52,7 +55,7 @@ public class KickManager : MonoBehaviour {
     }
 
     private void InputRotation() {
-        if (rotationAllowed) {
+        if (kickControlAllowed) {
             Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouse -= (Vector2)gameObject.transform.position;
             
@@ -80,7 +83,7 @@ public class KickManager : MonoBehaviour {
     }
 
     private void ForceControl() {
-        if (rotationAllowed) {
+        if (kickControlAllowed) {
             Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float distancia = Vector2.Distance(mouse, transform.position);
             if (distancia > 0) {
