@@ -27,7 +27,7 @@ public class Death : MonoBehaviour {
 
     private void OnDeath(string causeOfDeath) {
         print("Causa da morte: " + causeOfDeath);
-        gameManager.DecrementAttempt();
+        gameManager.OnDeath();
         spawner.Spawn();
     }
 

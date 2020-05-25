@@ -24,15 +24,23 @@ public class GameManager : MonoBehaviour {
         textAttempts.text = attempts.ToString();
     }
 
-    public void DecrementAttempt() {
+    public void OnDeath() {
         if (attempts <= 1) {
             attempts = 0;
-            GameOver();
+            Lose();
         }
         else attempts -= 1;
     }
 
-    private void GameOver() {
+    public void OnGoal() {
+        
+    }
+
+    private void Win() {
+
+    }
+
+    private void Lose() {
         print("Game Over");
     }
 }
