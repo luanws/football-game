@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject panelWin;
     [SerializeField] private GameObject panelLose;
     [SerializeField] private GameObject panelPause;
-
-    public bool spawnAllowed { get { return attempts >= 1; } }
+    private bool _win = false;
+    
+    public bool win { get { return _win; } }
+    public bool spawnAllowed { get { return attempts >= 1 && !_win; } }
     public float limitLeft { get { return transformLimitLeft.position.x; } }
     public float limitRight { get { return transformLimitRight.position.x; } }
 
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void OnGoal() {
-        attempts = 0;
+        _win = true;
         Win();
     }
 
@@ -45,7 +47,9 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Lose() {
-        panelLose.SetActive(true);
+        if (!_win) {
+            panelLose.SetActive(true);
+        }
     }
 
     private void Pause() {

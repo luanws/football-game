@@ -26,9 +26,11 @@ public class Death : MonoBehaviour {
     }
 
     private void OnDeath(string causeOfDeath) {
-        print("Causa da morte: " + causeOfDeath);
-        gameManager.OnDeath();
-        spawner.Spawn();
+        if (!gameManager.win) {
+            print("Causa da morte: " + causeOfDeath);
+            gameManager.OnDeath();
+            spawner.Spawn();
+        }
     }
 
     private void OverflowPositionDeath() {
