@@ -7,7 +7,7 @@ public class ExplosaoTnt : MonoBehaviour {
     private GameObject explosaoPrefab;
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (!other.gameObject.CompareTag("Cenario")) {
+        if (!other.gameObject.CompareTag("Ground")) {
             Instantiate(explosaoPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
