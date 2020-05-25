@@ -7,6 +7,7 @@ public class Death : MonoBehaviour {
     private Rigidbody2D rigidbody2D;
     private KickManager kickManager;
     private GameManager gameManager;
+    [SerializeField] private GameObject prefabDeathBall;
 
     private void Start() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -28,9 +29,16 @@ public class Death : MonoBehaviour {
     private void OnDeath(string causeOfDeath) {
         if (!gameManager.win) {
             print("Causa da morte: " + causeOfDeath);
+            animateDeath(transform.position);
             gameManager.OnDeath();
             spawner.Spawn();
         }
+    }
+
+    private void animateDeath(Vector2 position) {
+        GameObject deathBall = Instantiate(prefabDeathBall, position, Quaternion.identity);
+        Animator animator = deathBall.GetComponent<Animator>();
+        Destroy(deathBall, animator.GetCurrentAnimatorStateInfo(0).length);
     }
 
     private void OverflowPositionDeath() {
