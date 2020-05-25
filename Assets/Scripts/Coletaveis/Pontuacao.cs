@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class Pontuacao : MonoBehaviour
 {
-    public static Pontuacao instance;
+    private static Pontuacao _instance;
+    public static Pontuacao instance {
+        get {
+            if (_instance == null) {
+                _instance = new Pontuacao();
+            }
+            return _instance;
+        }
+    }
     public int moedas {
         get {
             return PlayerPrefs.GetInt("moedas", 100);
         }
         set {
             PlayerPrefs.SetInt("moedas", value);
-        }
-    }
-
-    void Awake() {
-        if(instance == null) {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        } else {
-            Destroy(gameObject);
         }
     }
 
