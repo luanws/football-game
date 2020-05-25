@@ -513,6 +513,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &821367736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1189735056958785146, guid: 772a279fc06e106469a362d5d904835e,
+    type: 3}
+  m_PrefabInstance: {fileID: 509242712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &822637251
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SerraGoleira
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533540943002368429, guid: e395ba676b1b9df408b4509d206295dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Death
       objectReference: {fileID: 0}
     - target: {fileID: 4533540943002368431, guid: e395ba676b1b9df408b4509d206295dc,
         type: 3}
@@ -1092,6 +1109,16 @@ PrefabInstance:
       propertyPath: transformLimitRight
       value: 
       objectReference: {fileID: 822637252}
+    - target: {fileID: 8321094051595332199, guid: 7ce301d3be56c5649850bd6ad62c39d0,
+        type: 3}
+      propertyPath: attempts
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321094051595332199, guid: 7ce301d3be56c5649850bd6ad62c39d0,
+        type: 3}
+      propertyPath: textAttempts
+      value: 
+      objectReference: {fileID: 821367736}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce301d3be56c5649850bd6ad62c39d0, type: 3}
 --- !u!1001 &2014195259
