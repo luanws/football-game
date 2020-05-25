@@ -11,7 +11,6 @@ public class Goal : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Finish")) {
-            print("Goal");
             gameManager.OnGoal();
         }
     }

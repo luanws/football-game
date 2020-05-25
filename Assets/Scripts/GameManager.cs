@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void OnGoal() {
+        attempts = 0;
         Win();
     }
 
