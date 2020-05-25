@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Death : MonoBehaviour {
     private Spawner spawner;
-    private Transform transformLimitLeft;
-    private Transform transformLimitRight;
     private Rigidbody2D rigidbody2D;
     private KickManager kickManager;
+    private GameManager gameManager;
 
     private void Start() {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         spawner = GetComponent<Spawner>();
         kickManager = GetComponent<KickManager>();
         rigidbody2D = GetComponent<Rigidbody2D>();
-        transformLimitLeft = GameObject.Find("LimitLeft").transform;
-        transformLimitRight = GameObject.Find("LimitRight").transform;
     }
 
     private void Update() {
@@ -33,8 +31,8 @@ public class Death : MonoBehaviour {
     }
 
     private void OverflowPositionDeath() {
-        float limitLeft = transformLimitLeft.position.x;
-        float limitRight = transformLimitRight.position.x;
+        float limitLeft = gameManager.limitLeft;
+        float limitRight = gameManager.limitRight;
         float x = transform.position.x;
 
         bool overflowPosition = x < limitLeft || x > limitRight;
