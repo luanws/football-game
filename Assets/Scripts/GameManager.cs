@@ -52,7 +52,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private void Pause() {
+    public void Pause() {
+        Time.timeScale = 0;
         panelPause.SetActive(true);
     }
 }
