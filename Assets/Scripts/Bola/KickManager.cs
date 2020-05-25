@@ -45,7 +45,6 @@ public class KickManager : MonoBehaviour {
         if (kickControlAllowed) {
             imagemArrow.enabled = false;
             imageArrowGreen.enabled = false;
-            kickControlAllowed = false;
             kickAllowed = true;
         }
     }
@@ -78,6 +77,7 @@ public class KickManager : MonoBehaviour {
         float x = forceKick * Mathf.Cos(rotation * Mathf.Deg2Rad);
         float y = forceKick * Mathf.Sin(rotation * Mathf.Deg2Rad);
         rigidbody2D.AddForce(new Vector2(x, y));
+        kickControlAllowed = false;
         kickAllowed = false;
         Sons.instance.Play(audioClipKick);
     }
