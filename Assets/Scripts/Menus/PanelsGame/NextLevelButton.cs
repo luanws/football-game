@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NextLevel : MonoBehaviour {
+public class NextLevelButton : MonoBehaviour {
     private GameManager gameManager;
     private Button buttonRestart;
 

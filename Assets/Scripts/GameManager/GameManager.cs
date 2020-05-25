@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    public static GameManager instance;
     [SerializeField] private Transform transformLimitLeft;
     [SerializeField] private Transform transformLimitRight;
     [SerializeField] private Text textAttempts;
@@ -19,12 +18,6 @@ public class GameManager : MonoBehaviour {
     public bool spawnAllowed { get { return attempts >= 1 && !_win; } }
     public float limitLeft { get { return transformLimitLeft.position.x; } }
     public float limitRight { get { return transformLimitRight.position.x; } }
-
-    private void Awake() {
-        if (instance == null) {
-            instance = this;
-        }
-    }
 
     private void Update() {
         textAttempts.text = attempts.ToString();
@@ -63,7 +56,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void NextLevel() {
-        print("Next Level");
         int level = int.Parse(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene((level + 1).ToString());
     }
