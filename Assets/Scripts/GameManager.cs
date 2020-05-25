@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Transform transformLimitLeft;
     [SerializeField] private Transform transformLimitRight;
     [SerializeField] private Text textAttempts;
-    [SerializeField] private int attempts;
+    [SerializeField] private int attempts = 3;
     [SerializeField] private GameObject panelWin;
     [SerializeField] private GameObject panelLose;
     [SerializeField] private GameObject panelPause;
