@@ -23,11 +23,11 @@ public class Pontuacao : MonoBehaviour
         }
     }
 
-    public void adicionarMoedas(int novasMoedas) {
+    public void AdicionarMoedas(int novasMoedas) {
         moedas += novasMoedas;
     }
 
-    public void removerMoedas(int perdaMoedas) {
+    public void RemoverMoedas(int perdaMoedas) {
         moedas -= perdaMoedas;
     }
 }

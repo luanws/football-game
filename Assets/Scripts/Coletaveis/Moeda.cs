@@ -7,7 +7,7 @@ public class Moeda : MonoBehaviour {
     [SerializeField] private AudioClip audioClipColetaMoeda;
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
-            Pontuacao.instance.adicionarMoedas(valor);
+            Pontuacao.instance.AdicionarMoedas(valor);
             Sons.instance.Play(audioClipColetaMoeda);
             Destroy(gameObject);
         }
