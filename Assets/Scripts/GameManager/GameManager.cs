@@ -59,4 +59,12 @@ public class GameManager : MonoBehaviour {
         int level = int.Parse(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene((level + 1).ToString());
     }
+
+    public void BackToMenu() {
+        
+    }
+
+    public void Resume() {
+        
+    }
 }

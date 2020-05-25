@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ResumeButton : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class ResumeButton : MonoBehaviour {
+    private GameManager gameManager;
+    private Button buttonResume;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Start() {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        buttonResume = GetComponent<Button>();
+        buttonResume.onClick.AddListener(gameManager.Resume);
     }
 }
