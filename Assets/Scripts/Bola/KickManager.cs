@@ -7,11 +7,12 @@ public class KickManager : MonoBehaviour {
     [SerializeField] private Image imagemArrow;
     [SerializeField] private Image imageArrowGreen;
     [SerializeField] private AudioClip audioClipKick;
+    [SerializeField] private float maxForceKick = 1000;
     private Rigidbody2D rigidbody2D;
     private float rotation;
     private bool rotationAllowed = false;
     private bool kickAllowed = false;
-    private float forceKick = 1000;
+    private float forceKick;
 
     private void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -24,8 +25,10 @@ public class KickManager : MonoBehaviour {
         RotateArrow();
         InputRotation();
 
-        if (kickAllowed) {
+        if (kickAllowed && forceKick > maxForceKick / 10) {
             Kick();
+        } else {
+            kickAllowed = false;
         }
         ForceControl();
     }
@@ -82,7 +85,7 @@ public class KickManager : MonoBehaviour {
             float distancia = Vector2.Distance(mouse, transform.position);
             if (distancia > 0) {
                 imageArrowGreen.fillAmount = distancia / 2;
-                forceKick = imageArrowGreen.fillAmount * 1000;
+                forceKick = imageArrowGreen.fillAmount * maxForceKick;
             }
         }
     }
