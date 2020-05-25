@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour {
     public float limitLeft { get { return transformLimitLeft.position.x; } }
     public float limitRight { get { return transformLimitRight.position.x; } }
 
+    private void Start() {
+        Time.timeScale = 1;
+    }
+
     private void Update() {
         textAttempts.text = attempts.ToString();
     }
@@ -61,10 +65,10 @@ public class GameManager : MonoBehaviour {
     }
 
     public void BackToMenu() {
-        
+        SceneManager.LoadScene("Menu");
     }
 
     public void Resume() {
-        
+        Time.timeScale = 1;
     }
 }
