@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GerenciadorDeFases : MonoBehaviour {
+public class LevelManager : MonoBehaviour {
     public GameObject botaoPrefab;
     public Transform botaoTransform;
-    public List<Fase> fases;
+    public List<Level> fases;
 
     void Start() {
         // PlayerPrefs.DeleteAll();
@@ -15,9 +15,9 @@ public class GerenciadorDeFases : MonoBehaviour {
     }
 
     private void gerarBotoes() {
-        foreach (Fase fase in fases) {
+        foreach (Level fase in fases) {
             GameObject botao = Instantiate(botaoPrefab);
-            BotaoFase botaoFase = botao.GetComponent<BotaoFase>();
+            ButtonLevel botaoFase = botao.GetComponent<ButtonLevel>();
 
             botaoFase.fase = fase;
             botao.transform.SetParent(botaoTransform, false);
@@ -30,7 +30,7 @@ public class GerenciadorDeFases : MonoBehaviour {
     }
 
     private void desbloquearFase(int numero) {
-        Fase fase = new Fase(numero);
+        Level fase = new Level(numero);
         fase.desbloquear();
     }
 }

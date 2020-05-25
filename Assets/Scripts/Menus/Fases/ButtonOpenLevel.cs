@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class AbrirFases : MonoBehaviour {
+public class ButtonOpenLevel : MonoBehaviour {
     public Button button;
     void Start() {
         button.onClick.AddListener(() => {

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BotaoFase : MonoBehaviour
+public class ButtonLevel : MonoBehaviour
 {
     public Text textFase;
-    public Fase fase {
+    public Level fase {
         get {
-            Fase fase = new Fase(int.Parse(textFase.text));
+            Level fase = new Level(int.Parse(textFase.text));
             return fase;
         }
         set {

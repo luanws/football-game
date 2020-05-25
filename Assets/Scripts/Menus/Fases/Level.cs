@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
-public class Fase {
+public class Level {
     public int numero;
     private const string CHAVE_FASE = "fase_desbloqueada_";
     public bool desbloqueada {
@@ -10,7 +10,7 @@ public class Fase {
             return bool.Parse(PlayerPrefs.GetString(CHAVE_FASE + numero, "false"));
         }
     }
-    public Fase(int numero) {
+    public Level(int numero) {
         this.numero = numero;
     }
     public void bloquear() {
