@@ -13,9 +13,11 @@ public class FollowBall : MonoBehaviour {
 
     private void Update() {
         ball = GameObject.Find("Ball");
-        Vector3 position = transform.position;
-        position.x = ball.transform.position.x;
-        position.x = Mathf.Clamp(position.x, gameManager.limitLeft, gameManager.limitRight);
-        transform.position = position;
+        if (ball != null) {
+            Vector3 position = transform.position;
+            position.x = ball.transform.position.x;
+            position.x = Mathf.Clamp(position.x, gameManager.limitLeft, gameManager.limitRight);
+            transform.position = position;
+        }
     }
 }
