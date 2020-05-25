@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Text textAttempts;
     [SerializeField] private int attempts;
 
+    public bool spawnAllowed { get { return attempts >= 1; } }
     public float limitLeft { get { return transformLimitLeft.position.x; } }
     public float limitRight { get { return transformLimitRight.position.x; } }
 
