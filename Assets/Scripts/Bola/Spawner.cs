@@ -5,13 +5,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
     private Rigidbody2D rigidbody2D;
     private KickManager kickManager;
-    private Animator animator;
     private Vector2 positionSpawn;
 
     private void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
         kickManager = GetComponent<KickManager>();
-        animator = GetComponent<Animator>();
         positionSpawn = transform.position;
     }
 
