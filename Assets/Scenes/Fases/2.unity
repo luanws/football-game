@@ -610,6 +610,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Espeto
       objectReference: {fileID: 0}
+    - target: {fileID: 1826148951190669562, guid: 38492c627b6efa944b1e1006110f4b7c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Death
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38492c627b6efa944b1e1006110f4b7c, type: 3}
 --- !u!1 &2058419487
@@ -705,6 +710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EspetoPequeno
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129766871047969882, guid: fa4799f667d2c6f4b908a9fce00c4078,
+        type: 3}
+      propertyPath: m_TagString
+      value: Death
       objectReference: {fileID: 0}
     - target: {fileID: 4129766871047969887, guid: fa4799f667d2c6f4b908a9fce00c4078,
         type: 3}

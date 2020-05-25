@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
-    [SerializeField] private Transform transformLimitLeft;
-    [SerializeField] private Transform transformLimitRight;
     private Rigidbody2D rigidbody2D;
     private KickManager kickManager;
     private Animator animator;
@@ -17,21 +15,10 @@ public class Spawner : MonoBehaviour {
         positionSpawn = transform.position;
     }
 
-    private void Update() {
-        if (CheckDeath()) Spawn();
-    }
-
-    private void Spawn() {
-        rigidbody2D.Sleep();
-        transform.position = positionSpawn;
+    public void Spawn() {
         kickManager.kickControlAllowed = true;
-    }
-
-    private bool CheckDeath() {
-        float limitLeft = transformLimitLeft.position.x;
-        float limitRight = transformLimitRight.position.x;
-        float x = transform.position.x;
-
-        return x < limitLeft || x > limitRight;
+        GameObject ball = Instantiate(gameObject, positionSpawn, Quaternion.identity);
+        ball.name = "Ball";
+        Destroy(gameObject);
     }
 }

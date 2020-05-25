@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 8040589215282479013}
   - component: {fileID: 4311656700498747358}
   - component: {fileID: 3016686911834013579}
+  - component: {fileID: 942556803987469925}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -330,6 +331,7 @@ MonoBehaviour:
   imageArrowGreen: {fileID: 314703059522923133}
   audioClipKick: {fileID: 8300000, guid: bd8da58e04a3bf34fb6a020b0627ab88, type: 3}
   maxForceKick: 1000
+  kickControlAllowed: 1
 --- !u!114 &4311656700498747358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,8 +356,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb41b48096e523144bfd8345c39dc123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformLimitLeft: {fileID: 0}
-  transformLimitRight: {fileID: 0}
+--- !u!114 &942556803987469925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314703058793153485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba59bb3c1670cf41a087eee7c604ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314703059522923135
 GameObject:
   m_ObjectHideFlags: 0
