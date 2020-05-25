@@ -3,23 +3,29 @@ using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Level {
-    public int numero;
-    private const string CHAVE_FASE = "fase_desbloqueada_";
-    public bool desbloqueada {
+    public int number;
+    private const string KEY_LEVEL = "fase_desbloqueada_";
+    public bool unlocked {
         get { 
-            return bool.Parse(PlayerPrefs.GetString(CHAVE_FASE + numero, "false"));
+            return bool.Parse(PlayerPrefs.GetString(KEY_LEVEL + number, "false"));
         }
     }
     public Level(int numero) {
-        this.numero = numero;
+        this.number = numero;
     }
-    public void bloquear() {
-        PlayerPrefs.SetString(CHAVE_FASE + numero, false.ToString());
+    public void Lock() {
+        PlayerPrefs.SetString(KEY_LEVEL + number, false.ToString());
     }
-    public void desbloquear() {
-        PlayerPrefs.SetString(CHAVE_FASE + numero, true.ToString());
+    public void Unlock() {
+        PlayerPrefs.SetString(KEY_LEVEL + number, true.ToString());
     }
-    public void iniciar() {
-        SceneManager.LoadScene("Scenes/Fases/" + numero.ToString());
+    public void UnlockNext() {
+        PlayerPrefs.SetString(KEY_LEVEL + (number + 1), true.ToString());
+    }
+    public void StartNext() {
+        SceneManager.LoadScene("Scenes/Fases/" + (number + 1));
+    }
+    public void Start() {
+        SceneManager.LoadScene("Scenes/Fases/" + number);
     }
 }

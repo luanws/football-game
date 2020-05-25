@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4312495371412528605}
   - component: {fileID: 2829870967494192461}
   m_Layer: 5
-  m_Name: ButtonFase
+  m_Name: ButtonLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 4312495371412528604}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f2e573baaa46147aade1f95adb337f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFase: {fileID: 4312495371993189416}
+  textLevel: {fileID: 4312495371993189416}
 --- !u!1 &4312495371993189418
 GameObject:
   m_ObjectHideFlags: 0

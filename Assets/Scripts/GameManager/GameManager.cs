@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     public bool spawnAllowed { get { return attempts >= 1 && !_win; } }
     public float limitLeft { get { return transformLimitLeft.position.x; } }
     public float limitRight { get { return transformLimitRight.position.x; } }
+    private Level currentLevel { get { return new Level(int.Parse(SceneManager.GetActiveScene().name)); } }
 
     private void Start() {
         Time.timeScale = 1;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Win() {
+        currentLevel.UnlockNext();
         panelWin.SetActive(true);
     }
 
@@ -56,12 +58,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public void RestartLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        currentLevel.Start();
     }
 
     public void NextLevel() {
-        int level = int.Parse(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene((level + 1).ToString());
+        currentLevel.StartNext();
     }
 
     public void BackToMenu() {

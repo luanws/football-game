@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class ButtonLevel : MonoBehaviour
 {
-    public Text textFase;
-    public Level fase {
+    public Text textLevel;
+    public Level level {
         get {
-            Level fase = new Level(int.Parse(textFase.text));
-            return fase;
+            Level level = new Level(int.Parse(textLevel.text));
+            return level;
         }
         set {
-            textFase.text = value.numero.ToString();
-            GetComponent<Button>().interactable = value.desbloqueada;
-            textFase.enabled = value.desbloqueada;
+            textLevel.text = value.number.ToString();
+            GetComponent<Button>().interactable = value.unlocked;
+            textLevel.enabled = value.unlocked;
         }
     }
 }

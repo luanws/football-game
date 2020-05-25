@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour {
     public GameObject botaoPrefab;
     public Transform botaoTransform;
-    public List<Level> fases;
+    public List<Level> levels;
 
     void Start() {
         // PlayerPrefs.DeleteAll();
@@ -15,22 +15,20 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void gerarBotoes() {
-        foreach (Level fase in fases) {
+        foreach (Level level in levels) {
             GameObject botao = Instantiate(botaoPrefab);
-            ButtonLevel botaoFase = botao.GetComponent<ButtonLevel>();
+            ButtonLevel buttonLevel = botao.GetComponent<ButtonLevel>();
 
-            botaoFase.fase = fase;
+            buttonLevel.level = level;
             botao.transform.SetParent(botaoTransform, false);
 
-            botaoFase.GetComponent<Button>().onClick.AddListener(() => {
-                desbloquearFase(fase.numero + 1);
-                fase.iniciar();
-            });
+            buttonLevel.GetComponent<Button>().onClick.AddListener(level.Start);
         }
     }
 
     private void desbloquearFase(int numero) {
-        Level fase = new Level(numero);
-        fase.desbloquear();
+        Level level = new Level(numero);
+        level.Unlock();
+        print("Level " + level.number + " desbloqueado");
     }
 }
