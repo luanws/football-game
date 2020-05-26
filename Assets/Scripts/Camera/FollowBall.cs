@@ -23,7 +23,7 @@ public class FollowBall : MonoBehaviour {
         if (ball != null) {
             Vector3 position = transform.position;
             
-            if (transform.position.x != limitLeft && ball.GetComponent<Rigidbody2D>().velocity == Vector2.zero) {
+            if (transform.position.x != limitLeft && ball.GetComponent<Rigidbody2D>().velocity == Vector2.zero && !gameManager.win) {
                 t -= velocitySmoothStepCamera * Time.deltaTime;
                 position.x = Mathf.SmoothStep(limitLeft, position.x, t);
             } else {
