@@ -53,5 +53,6 @@ Este jogo foi desenvolvido durante o curso de [Jogos 2D com Unity][course].
 - [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [Unity](https://unity.com/)
 
-# Plataformas compatíveis
+# 💻 Plataformas compatíveis
 
+<img width="200px" src="public/platforms.png" alt="Plataformas" />
